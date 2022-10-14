@@ -1,0 +1,20 @@
+function randCheck(count){
+  let rando = Math.random();
+    count ++;
+    console.log(rando);
+    if (rando > .75){
+      console.log(count);
+    }
+    else
+    {
+      setTimeout(randCheck(count),count*1000);
+      count ++;
+  }
+}
+
+
+function randomGame() {
+  let count = 0
+  randCheck(count)
+}
+
