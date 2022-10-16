@@ -1,0 +1,25 @@
+let q1 = document.getElementById("container")
+
+let q2 = document.querySelector("#container")
+
+let q3 = document.querySelectorAll(".second")
+
+let q4 = document.querySelector("ol > .third")
+
+let q5 = document.querySelector("#container")
+  q5.innerText = "hello"
+
+let q6 = document.querySelector(".footer")
+q6.classList.add("main")
+q6.classList.remove("main")
+
+let q8 = document.createElement("li")
+q8.innerText = "four"
+let q8Parent = document.querySelector("ul")
+q8Parent.append(q8)
+
+let q11 = document.querySelectorAll("ol > li")
+for (let item of q11){item.style.backgroundColor = "green"}
+
+let q12 = document.querySelector(".footer")
+q12.remove()
