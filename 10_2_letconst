@@ -10,3 +10,33 @@ What is hoisting?
   When a variable is hoisted, its declaration is read before the code is initialized, meaning that if you call the variable 
   without assigning it a value, it will return "undefined". Variables that are -not- hoisted will return a Ref Error. 
   Variables declared with VAR are hoisted and variables declared with LET or CONST are not hoisted.
+
+EXERCISES 10_3
+
+A. function double(arr) {
+  return arr.map(function(val) {
+    return val * 2;
+  });
+}
+
+ES2015 version:
+let double = arr => arr.map(val => val*2);
+
+B.
+function squareAndFindEvens(numbers){
+  var squares = numbers.map(function(num){
+    return num ** 2;
+  });
+  var evens = squares.filter(function(square){
+    return square % 2 === 0;
+  });
+  return evens;
+}
+
+squares => squares.map(val => val **2)
+
+ES2015 version:
+let squares = squares => squares.map(val => val **2)
+let squareAndFindEvens = squares => squares.map(val => val **2).filter(square => square % 2 ===0)
+
+
