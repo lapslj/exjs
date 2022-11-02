@@ -1,0 +1,12 @@
+const PI = 3.14
+
+What is the difference between var and let?
+  VAR has a function scope and allows redeclaring; LET is block-scoped and doesn't allow re-declaring.
+What is the difference between var and const?
+  Same as first answer; CONST also doesn't allow changing.
+What is the difference between let and const?
+  LET can be changed (let x = 5; x = 6); CONST cannot be changed, though it can be mutated.
+What is hoisting?
+  When a variable is hoisted, its declaration is read before the code is initialized, meaning that if you call the variable 
+  without assigning it a value, it will return "undefined". Variables that are -not- hoisted will return a Ref Error. 
+  Variables declared with VAR are hoisted and variables declared with LET or CONST are not hoisted.
