@@ -1,0 +1,84 @@
+//Refactor the below to rest operator and arrow function
+
+function filterOutOdds() {
+    var nums = Array.prototype.slice.call(arguments);
+    return nums.filter(function(num) {
+      return num % 2 === 0
+    });
+  }
+
+function betterOutOdds(...nums) {
+    return nums.filter( num => num % 2 === 0)
+}
+
+function findMin(...nums){
+    return nums.reduce((accum,next) => next < accum ? next : accum)
+    }
+
+//mergeObjects({a:1, b:2}, {c:3, d:4}) // {a:1, b:2, c:3, d:4}
+
+function mergeObjects(obj1,obj2){
+    return {...obj1,...obj2}
+}
+
+//doubleAndReturnArgs([1,2,3],4,4) // [1,2,3,8,8]
+//doubleAndReturnArgs([2],10,4) // [2, 20, 8]
+
+function doubleAndReturnArgs(arr,...obs){
+    const obArr = obs.map(obv => obv*2)
+    return [...arr,...obArr]
+}
+
+/** remove a random element in the items array
+and return a new array without that item. */
+
+function removeRandom(...items) {
+    let nArr = []
+    const iLen = items.length
+    const randVal = Math.floor(Math.random() * iLen)
+    console.log(randVal);
+    nArr = items.filter((item,i) => i !== randVal)
+    return nArr;
+}
+
+/** Return a new array with every item in array1 and array2. */
+
+function extend(array1, array2) {
+    return [...array1, ...array2]
+}
+
+
+/** Return a new object with all the keys and values
+from obj and a new key/value pair */
+
+function addKeyVal(obj, key, val) {
+    const nObj = {...obj}
+    nObj[key] = val
+    return nObj
+}
+
+/** Return a new object with a key removed. */
+
+
+
+const removeKey = (obj,key) => {
+    let nObj = {...obj}
+    delete nObj[key]
+    return nObj
+}
+
+
+/** Combine two objects and return a new object. */
+
+const combiner = (obj1,obj2) => {
+    let nObj = {...obj1,...obj2}
+    return nObj}
+
+
+/** Return a new object with a modified key and value. */
+
+const update = (obj,key,val) => {
+    let nObj = {...obj}
+    nObj[key] = val;
+    return nObj;
+}
