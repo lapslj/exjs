@@ -254,6 +254,7 @@ function vowelCount(str){
     }
     return vMap
 }
+
 //for each vowel in the set, go through that set and count them all in the orig word
 
 

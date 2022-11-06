@@ -11,7 +11,7 @@ function vowelCount(str){
         for (let letz of lrCase){
             letz === vowel ? vCount ++ : false
         }
-        console.log(vowel,vCount)
+        //console.log(vowel,vCount)
         vMap.set(vowel,vCount)
     }
     return vMap
