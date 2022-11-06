@@ -191,3 +191,69 @@ const raceResultsArrow = ([first,second,third, ...rest]) =>
     rest: ["David", "Pierre"]
   }
 */
+
+/*
+Quick Question #1
+What does the following code return?*/
+
+new Set([1,1,2,2,3,4]) // a set containing 1,2,3,4
+
+/*
+Quick Question #2
+What does the following code return? */
+
+[...new Set("referee")].join("") //a unique array containing r,e,f,""
+
+/*Quick Questions #3
+What does the Map m look like after running the following code? */
+
+let m = new Map();
+m.set([1,2,3], true);
+m.set([1,2,3], false); //m containing two unique arrays (Array(3)) one value true and one value false
+
+/*
+hasDuplicate
+Write a function called hasDuplicate which accepts an array 
+and returns true or false if that array contains a duplicate
+
+hasDuplicate([1,3,2,1]) // true
+hasDuplicate([1,5,-1,4]) // false
+*/
+
+function hasDuplicate(arr){
+    let nArr = new Set(arr);
+    return nArr.size !== arr.length ? true : false
+}
+
+/*
+vowelCount
+Write a function called vowelCount which 
+accepts a string and returns a map where 
+the keys are numbers and the values are the 
+count of the vowels in the string.
+
+vowelCount('awesome') // Map { 'a' => 1, 'e' => 2, 'o' => 1 }
+vowelCount('Colt') // Map { 'o' => 1 }
+*/
+
+function vowelCount(str){
+    let lrCase = str.toLowerCase()
+    let letterSet = [...new Set(lrCase)]//create a unique array of letters
+    let vowelSet = letterSet.filter(function(lttr){
+        return "aeiou".indexOf(lttr) !== -1 ? true : false;
+    })
+    console.log(vowelSet)
+    let vMap = new Map()
+    for (let vowel of vowelSet){
+        let vCount = 0
+        for (let letz of lrCase){
+            letz === vowel ? vCount ++ : false
+        }
+        //console.log(vowel,vCount)
+        vMap.set(vowel,vCount)
+    }
+    return vMap
+}
+//for each vowel in the set, go through that set and count them all in the orig word
+
+
