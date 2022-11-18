@@ -28,3 +28,13 @@ What are the processes that happen when you type “http://somesite.com/some/pag
 Computer checks browser cache, then local storage, then Internet Service Provider, then top-level domain name to try and resolve that URL into
 an IP address where the server is located.
 The server returns the content you want (or, more commonly, checks its own servers and assembles the content, then sends it back to you).
+
+curl -H "Accept: text/plain" https://icanhazdadjoke.com/
+Archaeology really is a career in ruins.
+
+dig icanhazdadjoke.com
+
+;; ANSWER SECTION:
+icanhazdadjoke.com.	77	IN	A	172.67.198.173
+icanhazdadjoke.com.	77	IN	A	104.21.66.15
+
